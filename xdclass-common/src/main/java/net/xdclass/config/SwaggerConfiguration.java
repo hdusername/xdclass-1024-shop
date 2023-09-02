@@ -1,4 +1,4 @@
-package net.xdclass;
+package net.xdclass.config;
 
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
