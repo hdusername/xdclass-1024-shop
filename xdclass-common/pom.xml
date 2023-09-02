@@ -17,4 +17,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <!--如果在父项目中固定版本时用的是scope=provided，如果有其他模块依赖此common模块，那么这个lombok的包不会被引入到其他模块中，因为指定了其只在编译时有效，如果想让lombok进入其他包，需要把父模块中scope=provided去掉-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--项目中添加 spring-boot-starter-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
