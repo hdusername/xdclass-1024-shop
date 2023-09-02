@@ -18,7 +18,7 @@
     </properties>
 
     <dependencies>
-        <!--如果在父项目中固定版本时用的是scope=provided，如果有其他模块依赖此common模块，那么这个lombok的包不会被引入到其他模块中，因为指定了其只在编译时有效，如果想让lombok进入其他包，需要把父模块中scope=provided去掉-->
+        <!--如果在父项目中固定版本时用的是scope=provided，如果有其他模块依赖此common模块，那么这个lombok的包不会被引入到其他模块中，只引入到了common模块，因为指定了其只在编译时有效，如果想让lombok进入其他包，需要把父模块中scope=provided去掉-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -40,6 +40,22 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+
+        <!-- 代码自动生成依赖 begin 上线是不需要这两个依赖的，只在common中添加-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+        <!-- velocity -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <!-- 代码自动生成依赖 end-->
+
+
     </dependencies>
 
 </project>
