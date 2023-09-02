@@ -1,9 +1,12 @@
 package net.xdclass.service.impl;
 
+import net.xdclass.mapper.AddressMapper;
+import net.xdclass.model.AddressDO;
 import net.xdclass.model.UserDO;
 import net.xdclass.mapper.UserMapper;
 import net.xdclass.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +18,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-09-02
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, UserDO> implements UserService {
+public class UserServiceImpl implements UserService {
 
 }
