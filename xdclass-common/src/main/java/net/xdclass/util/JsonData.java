@@ -51,6 +51,14 @@ public class JsonData {
         return new JsonData(-1, null, msg);
     }
 
+    /**
+     * 失败，传入描述信息
+     * @param msg
+     * @return
+     */
+    public static JsonData buildError(String msg, int code) {
+        return new JsonData(code, null, msg);
+    }
 
     /**
      * 自定义状态码和错误信息
