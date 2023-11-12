@@ -12,6 +12,11 @@ spring:
     username: root
     password: root
 
+  redis:
+    host: 192.168.41.131
+    password: 123456
+    port: 8000
+
 #配置plus打印sql日志
 mybatis-plus:
   configuration:
